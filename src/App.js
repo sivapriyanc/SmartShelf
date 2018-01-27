@@ -6,6 +6,7 @@ import SideBar from './sideBar';
 import SearchBar from './searchBar';
 import Footer from './footer';
 import myData from './data/product.json';
+import Chart from './chart';
 
 class App extends Component {
 
@@ -103,9 +104,9 @@ class App extends Component {
       return <CategoryList ResetProduct={this.resetProduct} key={index} category={category} />
     });
     return (
-      
+
       <div className="wrapper">
-    
+
         <header className="main-header">
           <a href="index2.html" className="logo">
             <span className="logo-mini"><b>A</b>isle</span>
@@ -124,7 +125,7 @@ class App extends Component {
             {categories}
           </div>
         </div>
-    
+        <Chart />
         <Footer />
         <div className="control-sidebar-bg"></div>
       </div>

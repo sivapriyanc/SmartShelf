@@ -17,7 +17,7 @@ class Product extends Component {
         let height = Math.round(this.props.product.InStock * 100 / this.props.maxVolume);
         let cls = "section-fill bg-green";
         if (height === 0) {
-            cls = "section-fill bg-red";
+            cls = "section-fill bg-gray";
         }
         else if (height < this.props.thresholdVolume) {
             cls = "section-fill bg-yellow";
@@ -33,10 +33,13 @@ class Product extends Component {
             <div className="flex-content">
                 <div className="section-content">
                     <div className={cls}>
-                        <div className="section-unfill" style={height}></div>
+                        <div className="section-unfill" style={height}>
+                        </div>
                     </div>
                     <div className="product-img">
-                        <img alt={this.props.product.ProductName} src={img} />
+                        <a data-toggle="modal" data-target="#myModal">
+                            <img alt={this.props.product.ProductName} src={img} />
+                        </a>
                     </div>
                 </div>
                 <div className={cls !== "section-fill bg-green" ? "section-title-action" : "section-title-action bg-green"}>

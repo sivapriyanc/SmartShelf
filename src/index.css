@@ -5234,7 +5234,7 @@ table.text-center th {
 }
 .bg-gray {
   color: #000;
-  background-color: #d2d6de !important;
+  background-color: gray !important;
 }
 .bg-gray-light {
   background-color: #f7f7f7;
@@ -7563,3 +7563,31 @@ table.text-center th {
 .disp-none{
   display: none;
 }
+
+
+/* .empty-dot {
+  height: 5px;
+  padding: 5px;
+  width: 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.available-dot {
+  height: 5px;
+  width: 5px;
+  padding: 5px;
+  background-color: green;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.threshold-dot {
+  height: 5px;
+  width: 5px;
+  padding: 5px;
+  background-color: red;
+  border-radius: 50%;
+  display: inline-block;
+} */
