@@ -27,8 +27,8 @@ class Product extends Component {
                         <img alt={this.props.product.ProductName} src={img} />
                     </div>
                 </div>
-                <div className="section-title-action">
-                    <i className="fa fa-upload"></i><span>{this.props.product.ProductName}</span>
+                <div className={cls !== "section-fill bg-green" ? "section-title-action" : "section-title-action bg-green"}>
+                    <i className={cls !== "section-fill bg-green" ? "fa fa-upload" : "disp-none"}></i><span>{this.props.product.ProductName}</span>
                 </div>
             </div>
         );
