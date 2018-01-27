@@ -1,6 +1,18 @@
 import React, { Component } from 'react';
 import img from './no-image.png';
+
 class Product extends Component {
+    constructor(props) {
+        super(props);
+        this.resetProduct = this.resetProduct.bind(this);
+    }
+
+    resetProduct(product, maxVolume) {
+        if (typeof this.props.ResetProduct === "function") {
+            this.props.ResetProduct(this.props.product, this.props.maxVolume)
+        }
+    }
+
     render() {
         let height = Math.round(this.props.product.InStock * 100 / this.props.maxVolume);
         let cls = "section-fill bg-green";
@@ -28,7 +40,9 @@ class Product extends Component {
                     </div>
                 </div>
                 <div className={cls !== "section-fill bg-green" ? "section-title-action" : "section-title-action bg-green"}>
-                    <i className={cls !== "section-fill bg-green" ? "fa fa-upload" : "disp-none"}></i><span>{this.props.product.ProductName}</span>
+                    <span onClick={cls !== "section-fill bg-green" ? this.resetProduct : ""}>
+                        <i className={cls !== "section-fill bg-green" ? "fa fa-upload" : "disp-none"}></i><span>{this.props.product.ProductName}</span>
+                    </span>
                 </div>
             </div>
         );
