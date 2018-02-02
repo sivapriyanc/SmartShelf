@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import AislesLayout from './aislesLayout';
 import CategoryList from './categoryList';
 import Navigation from './navigation';
 import SideBar from './sideBar';
@@ -124,6 +125,7 @@ class App extends Component {
           <div className="content-table">
             {categories}
           </div>
+          <AislesLayout />
         </div>
         <Chart />
         <Footer />
